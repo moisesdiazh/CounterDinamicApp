@@ -1,0 +1,104 @@
+body {
+    background-color: #88ad89;
+}
+
+.botoncounter  {
+  background-color: #4caf91; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  margin-left: 20px;
+}
+
+.botoncounter:hover {
+  background-color: white; /* Green */
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+
+
+ * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* background-color: #88ad89; */
+    background-color: #7d8096;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .modal h1 {
+    margin: 30px;
+  }
+
+  .modal label {
+    margin-right: 10px;
+  }
+
+  .close {
+    margin-top: 10px;
+    background-color: #4caf91; /* Green */
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #4caf50;
+    margin-left: 20px;
+  }
+
+  .close:hover {
+    background-color: white; /* Green */
+    color: #4caf50;
+    border: 2px solid #4caf50;
+  }
+
+  
+
+  
+  
