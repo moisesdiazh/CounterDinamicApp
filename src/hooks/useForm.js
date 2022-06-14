@@ -1,19 +1,18 @@
-import {useState} from "react";
+import { useState } from "react";
 
 //establecemos el initialstate como un objeto vacio
 export const useForm = (initialState = {}) => {
-
   const [values, setValues] = useState(initialState);
 
-  const reset = () => { //reseteando el formulario
+  const reset = () => {
+    //reseteando el formulario
 
-      setValues(initialState);
-  }
+    setValues(initialState);
+  };
 
-                            //desectructuramos el e.target.name
+  //desectructuramos el e.target.name
   const handleInputChange = ({ target }) => {
     setValues({
-
       ...values,
       [target.name]: target.value,
     });

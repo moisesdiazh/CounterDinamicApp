@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import { uid } from "uid";
 
-export const useCounter = (initialState = 0) => {
+export const useCounter = (initialState = 0, search) => {
   const listCounterInitial = localStorage.getItem("state")
     ? JSON.parse(localStorage.getItem("state"))
     : [];
-
-  console.log(listCounterInitial);
 
   const [listCounter, setListCounter] = useState(listCounterInitial);
 
@@ -99,10 +97,33 @@ export const useCounter = (initialState = 0) => {
     }));
   };
 
+  // useEffect(() => {
+  //   if (search.select === "") {
+  //       listCounter();
+
+  //   }else if (search.select === "5<") {
+
+  //       listCounter().filter(item => item.counter < 5);
+  //       setListCounter()
+
+  //   }else if (search.select === "5>") {
+  //       listCounter().filter(item => item.counter > 5);
+
+  //   }else if (search.select === "10>") {
+  //       listCounter().filter(item => item.counter < 10);
+
+  //   }else if (search.select === "10>") {
+  //       listCounter().filter(item => item.counter > 10);
+
+  //   }
+
+  // }, [search]);
+
   return {
     counter,
     listCounter,
     createCounter,
+    setListCounter,
     increment,
     decrement,
     reset,
