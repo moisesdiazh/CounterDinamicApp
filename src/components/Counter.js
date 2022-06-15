@@ -162,7 +162,7 @@ export const Counter = () => {
       </ul>
       
         <footer>
-          <p>Número de contadores: {listCounter.length}</p>
+          Número de contadores: {listCounter.length}
         </footer>
     </>
   );
