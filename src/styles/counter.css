@@ -1,8 +1,124 @@
-body {
-    background-color: #88ad89;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.botoncounter  {
+body {
+  /* background-color: #88ad89; */
+  background-color: #88ad89;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.buttoncounter {
+  background-color: #4caf91; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.buttoncounter:hover {
+  background-color: white; /* Green */
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.addCounter {
+  background-color: #4caf91; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  margin-left: 178px;
+  margin-bottom: 20px;
+}
+
+.addCounter:hover {
+  background-color: white; /* Green */
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.filterbutton {
+  background-color: #4caf91; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.filterbutton:hover {
+  background-color: white; /* Green */
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #88ad89;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 30px;
+}
+
+.modal label {
+  margin-right: 10px;
+}
+
+.close {
   background-color: #4caf91; /* Green */
   border: none;
   border-radius: 20px;
@@ -16,7 +132,48 @@ body {
   margin-left: 20px;
 }
 
-.botoncounter:hover {
+.close:hover {
+  background-color: white; /* Green */
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.labelSearch {
+  margin-right: 8px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+
+}
+
+.search {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 90px;
+  margin-left: 35px;
+}
+
+footer {
+  text-align: center;
+  font-size: x-large;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 70px;
+  background: #4caf91;
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 100%;
+  
+}
+
+footer:hover {
   background-color: white; /* Green */
   color: #4caf50;
   border: 2px solid #4caf50;
@@ -24,81 +181,109 @@ body {
 
 
 
- * {
-    box-sizing: border-box;
-  }
+.counter-card {
+  margin-left: 25px;
+}
+
+.search-container{
+  margin-left: 65px;
+  margin-top: 10px;
+}
+
+.name-counter {
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.addModal {
+  background-color: #4caf91; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+.addModal:hover {
+  background-color: white; /* Green */
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+/* media queries */
+
+
+
+@media screen and (max-width:680px) and (min-width:310px){
   
-  body {
-    /* background-color: #88ad89; */
-    background-color: #7d8096;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  .modal-container {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.3);
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    pointer-events: none;
-    opacity: 0;  
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: opacity 0.3s ease;
-  }
-  
-  .show {
-    pointer-events: auto;
-    opacity: 1;
-  }
-  
-  .modal {
-    background-color: #fff;
-    width: 600px;
-    max-width: 100%;
-    padding: 30px 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-  
-  .modal h1 {
-    margin: 30px;
+  footer {
+    margin-right: 10px;
+    margin-left: 30px;
+    width: 80%;
   }
 
-  .modal label {
-    margin-right: 10px;
+  .addCounter {
+    margin-left: 65px;
+  }
+
+  .labelSearch {
+    margin-left: 5px;
+  }
+
+  hr {
+    width: 219px;
+    margin-left: 0;
+  }
+
+  .search {
+    padding-right: 15px;
+  }
+
+  .title {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .addModal {
+    margin-top: 10px;
+    margin-left: 3px;
   }
 
   .close {
-    margin-top: 10px;
-    background-color: #4caf91; /* Green */
-    border: none;
-    border-radius: 20px;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border: 2px solid #4caf50;
-    margin-left: 20px;
+    margin-left: 6px;
+
   }
 
-  .close:hover {
-    background-color: white; /* Green */
-    color: #4caf50;
-    border: 2px solid #4caf50;
+  .name-counter {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
+  .modal {
+    height: 340px;
+    width: 270px;
+    margin-right: 18px;
+  }
   
+  .titleModal {
+    font-size: 20px;
+    
+  }
 
-  
-  
+  .counter-card{
+    max-width: 216px;
+  }
+
+  .counter-card-title{
+    max-width: 216px;
+  }
+}
+
+

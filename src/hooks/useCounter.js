@@ -97,27 +97,7 @@ export const useCounter = (initialState = 0, search) => {
     }));
   };
 
-  // useEffect(() => {
-  //   if (search.select === "") {
-  //       listCounter();
 
-  //   }else if (search.select === "5<") {
-
-  //       listCounter().filter(item => item.counter < 5);
-  //       setListCounter()
-
-  //   }else if (search.select === "5>") {
-  //       listCounter().filter(item => item.counter > 5);
-
-  //   }else if (search.select === "10>") {
-  //       listCounter().filter(item => item.counter < 10);
-
-  //   }else if (search.select === "10>") {
-  //       listCounter().filter(item => item.counter > 10);
-
-  //   }
-
-  // }, [search]);
 
   return {
     counter,

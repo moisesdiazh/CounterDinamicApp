@@ -12,18 +12,18 @@ const CounterCard = (props) => {
   return (
     <>
       <hr />
-      <li>
-        <h1>
+      <li className="counter-card">
+        <h1 className="counter-card-title">
           {name} counter: {counter}
         </h1>
 
-        <button onClick={() => increment(id)} className="botoncounter">
+        <button onClick={() => increment(id)} className="buttoncounter">
           Aumentar
         </button>
-        <button onClick={() => decrement(id)} className="botoncounter">
+        <button onClick={() => decrement(id)} className="buttoncounter">
           Disminuir
         </button>
-        <button className="botoncounter" onClick={() => handleDelete(id)}>
+        <button className="buttoncounter" onClick={() => handleDelete(id)}>
           Eliminar contador
         </button>
       </li>
@@ -57,7 +57,6 @@ export const Counter = () => {
   };
 
   useEffect(() => {
-
     if (saveSearch === "") {
       setCounterFiltered(listCounter.filter((item) => item.counter > 0));
     }
@@ -81,35 +80,46 @@ export const Counter = () => {
 
   return (
     <>
-      <div className="">
-        <h1>Challenge Los Heroes</h1>
+      
+        <header>
 
-        <Select setSaveSearch={setSaveSearch} />
+          <h1 className="title">Challenge Los Heroes</h1>
+        </header>
+
+      <div className="container">
 
         <button
           onClick={() => setModal(!modal)}
-          className="botoncounter"
+          className="addCounter"
           id="open"
+          disabled={listCounter.length === 20}
         >
           Agregar contador
         </button>
+
       </div>
+
+      <Select setSaveSearch={setSaveSearch} />
+
 
       <div className={`${modal && "show"} modal-container`}>
         <div className="modal">
-          <h1>Agrega un contador</h1>
+          <h1 className="titleModal">Agrega un contador</h1>
           <form onSubmit={handleSubmit}>
-            <label>Nombre del contador</label>
+            <label className="labelModal">Nombre del contador</label>
             <input
               type="text"
+              className="name-counter"
               id="name"
               name="name"
-              placeholder="Ingresa nombre del contador"
+              placeholder="Nombre del contador"
               autoComplete="off"
+              maxlength="20"
               onChange={handleInputChange}
               value={name}
             />
-            <button type="submit" className="botoncounter">
+
+            <button type="submit" className="addModal" disabled={listCounter.length === 20}>
               Confirmar
             </button>
           </form>
@@ -123,7 +133,6 @@ export const Counter = () => {
       <ul className="list">
         {counterFiltered.length > 0 ? (
           <>
-            <p>Contadores filtrados</p>
 
             {counterFiltered.map(({ id, ...rest }) => (
               <CounterCard
@@ -151,8 +160,8 @@ export const Counter = () => {
           </>
         )}
       </ul>
-
-      <footer>Numero de contadores: {listCounter.length}</footer>
+      
+        <footer>Número de contadores: {listCounter.length}</footer>
     </>
   );
 };
